@@ -262,7 +262,8 @@ namespace Model.Migrations
 
                     b.Property<string>("Firstname")
                         .IsRequired()
-                        .HasColumnType("longtext");
+                        .HasMaxLength(2)
+                        .HasColumnType("varchar(2)");
 
                     b.Property<Guid?>("GroupsId")
                         .HasColumnType("char(36)");

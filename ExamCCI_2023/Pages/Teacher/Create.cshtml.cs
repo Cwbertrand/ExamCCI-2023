@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
@@ -12,6 +13,7 @@ namespace ExamCCI_2023.Pages.Teacher
     public class CreateModel : PageModel
     {
         private readonly Model.ApplicationDbContext _context;
+        public List<StudentGroup> Groups { get; set; }
 
         public CreateModel(Model.ApplicationDbContext context)
         {
@@ -20,6 +22,7 @@ namespace ExamCCI_2023.Pages.Teacher
 
         public IActionResult OnGet()
         {
+            Groups = _context.Student.ToList();
             return Page();
         }
 

@@ -19,14 +19,17 @@
                 </button>
                 <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
                     <ul class="navbar-nav flex-grow-1">
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-page="/Teacher/Index">Enseignants</a>
-                        </li>
+                        @if (User.Identity.IsAuthenticated)
+                        {
+                            <li class="nav-item">
+                                <a class="nav-link text-dark" asp-area="" asp-page="/Teacher/Index">Enseignants</a>
+                            </li>
+                        }
                         <li class="nav-item">
                             <a class="nav-link text-dark" asp-area="" asp-page="/StudentGroups/Index">Classes</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-page="/Students/Indx">Etudiants</a>
+                            <a class="nav-link text-dark" asp-area="" asp-page="/Student/Index">Etudiants</a>
                         </li>
                     </ul>
                     <partial name="_LoginPartial" />

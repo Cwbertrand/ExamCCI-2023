@@ -1,6 +1,11 @@
 ﻿@page
 @model IndexModel
 
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Pages/Shared/_Layout.cshtml";
+}
+
 <p>
     <a asp-page="Create">Create New</a>
 </p>
@@ -13,6 +18,9 @@
             <th>
                 @Html.DisplayNameFor(model => model.Student[0].Lastname)
             </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Student[0].DateOfBirth)
+            </th>
             <th></th>
         </tr>
     </thead>
@@ -24,6 +32,9 @@
             </td>
             <td>
                 @Html.DisplayFor(modelItem => item.Lastname)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DateOfBirth)
             </td>
             <td>
                 <a asp-page="./Edit" asp-route-id="item.Id">Edit</a> |

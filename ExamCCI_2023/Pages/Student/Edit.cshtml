@@ -1,12 +1,47 @@
 ﻿@page
-@model EditModel
+@model ExamCCI_2023.Pages.Student.DetailsModel
+@{
+    ViewData["Title"] = "Edit";
+    Layout = "~/Pages/Shared/_Layout.cshtml";
+}
 
-<h4>Student</h4>
+<h1>Edit</h1>
+
+<h4>Contact</h4>
 <hr />
 <div class="row">
     <div class="col-md-4">
         <form method="post">
-            
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="Student.Id" />
+            <div class="form-group">
+                <label asp-for="Student.Firstname" class="control-label"></label>
+                <input asp-for="Student.Firstname" class="form-control" />
+                <span asp-validation-for="Student.Firstname" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Student.Lastname" class="control-label"></label>
+                <input asp-for="Student.Lastname" class="form-control" />
+                <span asp-validation-for="Student.Lastname" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Student.DateOfBirth" class="control-label"></label>
+                <input asp-for="Student.DateOfBirth" class="form-control" />
+                <span asp-validation-for="Student.DateOfBirth" class="text-danger"></span>
+            </div>
+            <div class="my-3">
+                <p><strong>Edit groupteachers</strong></p>
+                @if (Model.AllGroups != null)
+                {
+                    @foreach (var group in Model.AllGroups)
+                    {
+                        <input type="checkbox" name="selectedGroups" value="@int.Parse(group.Value)"
+                        @(Model.SelectedGroups.Contains(int.Parse(group.Value)) ? "checked" : "") />
+                        @group.Text
+                        <br />
+                    }
+                }
+            </div>
             <div class="form-group">
                 <input type="submit" value="Save" class="btn btn-primary" />
             </div>
@@ -19,5 +54,7 @@
 </div>
 
 @section Scripts {
-    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
 }

@@ -11,6 +11,7 @@ namespace ExamCCI_2023.Pages.Student
 {
     public class CreateModel : PageModel
     {
+        private readonly ApplicationDbContext _context;
 
         public CreateModel(ApplicationDbContext context)
         {

@@ -1,11 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "LTZqf6v9+Tn4jV0n9VabdDu5Yt9X1FiRSgWU0MxS7Bsy7/ynqqaN2OWK1NT8Osr0JjJiU51IQK2aSbEezYRBfQ==",
+  "dgSpecHash": "AKVJWNul8JyHG/dwr4rTLbrzXLlXKIiS0etMgSbMZw1vfULj6PpOcJv73fVB92gTxXdt4riRMfB/zPqSLe7Yjw==",
   "success": true,
   "projectFilePath": "C:\\Users\\BertrandWung\\Desktop\\ExamCCI_2023\\ExamCCI_2023\\ExamCCI_2023.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\BertrandWung\\.nuget\\packages\\azure.core\\1.25.0\\azure.core.1.25.0.nupkg.sha512",
     "C:\\Users\\BertrandWung\\.nuget\\packages\\azure.identity\\1.7.0\\azure.identity.1.7.0.nupkg.sha512",
+    "C:\\Users\\BertrandWung\\.nuget\\packages\\bogus\\34.0.2\\bogus.34.0.2.nupkg.sha512",
     "C:\\Users\\BertrandWung\\.nuget\\packages\\humanizer\\2.14.1\\humanizer.2.14.1.nupkg.sha512",
     "C:\\Users\\BertrandWung\\.nuget\\packages\\humanizer.core\\2.14.1\\humanizer.core.2.14.1.nupkg.sha512",
     "C:\\Users\\BertrandWung\\.nuget\\packages\\humanizer.core.af\\2.14.1\\humanizer.core.af.2.14.1.nupkg.sha512",
