@@ -1,0 +1,15 @@
+﻿@model ExamCCI_2023.Pages.Teacher.PaginationModel
+@{
+}
+<div>
+    <nav aria-label="Page navigation">
+        <ul class="pagination">
+            @for (int i = 1; i <= Model.PageCount; i++)
+            {
+                <li class="page-item @(i == Model.PageIndex ? "active" : "")">
+                    <a class="page-link"  asp-route-PageIndex="@i">@i</a>
+                </li>
+            }
+        </ul>
+    </nav>
+</div>
