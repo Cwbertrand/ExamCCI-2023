@@ -1,0 +1,35 @@
+﻿@page
+@model IndexModel
+
+<p>
+    <a asp-page="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Student[0].Firstname)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Student[0].Lastname)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model.Student) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Firstname)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Lastname)
+            </td>
+            <td>
+                <a asp-page="./Edit" asp-route-id="item.Id">Edit</a> |
+                <a asp-page="./Details" asp-route-id="item.Id">Details</a> |
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
